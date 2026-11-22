@@ -416,7 +416,7 @@ function render(){
  $('#hours').innerHTML=[1,2,3,4,5,6,0].map(d=>{const h=I.hours[d];return`<tr data-d="${d}"><td>${DN[d]}</td><td>${h?`${h.o}:00 – ${h.c}:00`:'Cerrado'}</td></tr>`}).join('');
  const FT=document.querySelectorAll('footer>div');
  FT[1].innerHTML=`<p><strong>Dirección</strong><br>${esc(I.addr)}</p><p>${esc(I.extra)}</p>`;
- FT[2].innerHTML=`<p><strong>Contacto</strong><br>Instagram: ${esc(I.ig)}<br>WhatsApp: ${esc(I.wa)}</p>`;
+ FT[2].innerHTML=`<p><strong>Contacto</strong><br>Instagram: ${esc(I.ig)}<br>WhatsApp: ${esc(I.wa)}</p><p style="margin-top:16px"><a href="#admin" id="admLink" style="opacity:.5;font-size:13px">Administrar</a></p>`;
  $('.nota').textContent=I.nota;
  status();
 }
@@ -443,6 +443,7 @@ const api=async(c,path,o={})=>{
 };
 const errTxt=e=>e.status===401?'El token no es válido o venció.':e.status===403?'El token no tiene permiso de escritura en este repositorio.':e.status===404?'No se encontró el repositorio o la rama. Revisá los datos.':(e.status===409||e.status===422)?'El archivo cambió en GitHub. Cerrá el panel y volvé a abrirlo.':(e.message||'No se pudo conectar.');
 const showBtn=()=>{btn.hidden=location.hash!=='#admin'};showBtn();addEventListener('hashchange',showBtn);
+document.addEventListener('click',e=>{if(e.target.id==='admLink'){e.preventDefault();btn.click()}});
 
 const connect=()=>new Promise(res=>{
  const s={branch:'main',path:'menu.json',...guess(),...saved()};
