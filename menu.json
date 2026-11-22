@@ -1,0 +1,181 @@
+{
+ "items": [
+  {
+   "c": "cafes",
+   "e": "☕",
+   "n": "Espressos",
+   "p": "$2.200",
+   "d": "Café intenso, corto y aromático.",
+   "t": "Clásico de la casa",
+   "fav": false
+  },
+  {
+   "c": "cafes",
+   "e": "🥛",
+   "n": "Cappuccino",
+   "p": "$3.400",
+   "d": "Espresso con leche cremosa y espuma suave.",
+   "t": "",
+   "fav": false
+  },
+  {
+   "c": "cafes",
+   "e": "🤎",
+   "n": "Latte",
+   "p": "$3.600",
+   "d": "Un café suave, equilibrado y aterciopelado.",
+   "t": "",
+   "fav": true
+  },
+  {
+   "c": "cafes",
+   "e": "🍫",
+   "n": "Mocha",
+   "p": "$3.900",
+   "d": "La combinación perfecta de café y chocolate.",
+   "t": "",
+   "fav": true
+  },
+  {
+   "c": "frias",
+   "e": "🧊",
+   "n": "Cold brew",
+   "p": "$3.800",
+   "d": "Café infusionado en frío, refrescante y suave.",
+   "t": "",
+   "fav": false
+  },
+  {
+   "c": "frias",
+   "e": "🍋",
+   "n": "Limonada",
+   "p": "$2.900",
+   "d": "Limón exprimido, hielo y un toque de menta.",
+   "t": "",
+   "fav": true
+  },
+  {
+   "c": "dulces",
+   "e": "🥐",
+   "n": "Medialunas",
+   "p": "$1.200",
+   "d": "Dos medialunas doradas, dulces y tiernas.",
+   "t": "",
+   "fav": false
+  },
+  {
+   "c": "dulces",
+   "e": "🍰",
+   "n": "Cheesecake",
+   "p": "$4.200",
+   "d": "Suave crema de queso con base crocante.",
+   "t": "Favorito",
+   "fav": false
+  },
+  {
+   "c": "dulces",
+   "e": "🍪",
+   "n": "Cookie de chocolate",
+   "p": "$2.000",
+   "d": "Grande, recién horneada y con chips.",
+   "t": "",
+   "fav": false
+  },
+  {
+   "c": "salados",
+   "e": "🥪",
+   "n": "Tostado clásico",
+   "p": "$4.500",
+   "d": "Jamón y queso en pan tostado.",
+   "t": "",
+   "fav": false
+  },
+  {
+   "c": "salados",
+   "e": "🥑",
+   "n": "Tostón de palta",
+   "p": "$4.800",
+   "d": "Pan de campo, palta fresca y semillas.",
+   "t": "",
+   "fav": false
+  },
+  {
+   "c": "salados",
+   "e": "🥧",
+   "n": "Porción de tarta",
+   "p": "$3.900",
+   "d": "Consultá por los sabores del día.",
+   "t": "",
+   "fav": false
+  }
+ ],
+ "info": {
+  "addr": "Av. Principal 123",
+  "extra": "Estacionamiento en la calle · Bicicletas bienvenidas",
+  "ig": "@cafeesquina",
+  "wa": "11 1234-5678",
+  "nota": "Todos los cafés se preparan al momento. Consultá por opciones vegetales y productos sin TACC.",
+  "hours": [
+   null,
+   {
+    "o": 8,
+    "c": 20
+   },
+   {
+    "o": 8,
+    "c": 20
+   },
+   {
+    "o": 8,
+    "c": 20
+   },
+   {
+    "o": 8,
+    "c": 20
+   },
+   {
+    "o": 8,
+    "c": 20
+   },
+   {
+    "o": 8,
+    "c": 20
+   }
+  ]
+ },
+ "hoy": {
+  "t": "Menú de hoy",
+  "l": [
+   {
+    "e": "☕",
+    "n": "Espressos",
+    "p": "$2.200",
+    "d": "Café intenso, corto y aromático."
+   },
+   {
+    "e": "🥛",
+    "n": "Cappuccino",
+    "p": "$3.400",
+    "d": "Espresso con leche cremosa y espuma suave."
+   },
+   {
+    "e": "🧊",
+    "n": "Cold brew",
+    "p": "$3.800",
+    "d": "Café infusionado en frío, refrescante y suave."
+   },
+   {
+    "e": "🥐",
+    "n": "Medialunas",
+    "p": "$1.200",
+    "d": "Dos medialunas doradas, dulces y tiernas."
+   },
+   {
+    "e": "🍰",
+    "n": "Cheesecake",
+    "p": "$4.200",
+    "d": "Suave crema de queso con base crocante."
+   }
+  ]
+ }
+}

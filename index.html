@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Café Esquina | Carta</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+:root{--bg:#1a110c;--bg2:#241811;--cream:#efe3cf;--paper:#f3e8d5;--ink:#2e1d14;--muted:#a8927f;--muted-ink:#7a6553;--copper:#c0743f;--copper-d:#9c5a2c;--green:#2f4a33;--line:#3a2a20;--line-ink:#ddcdb4;
+--serif:'Newsreader',Georgia,'Times New Roman',serif;--sans:'Inter',system-ui,Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--cream);font-family:var(--sans);line-height:1.5}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--copper);outline-offset:3px}
+header{display:flex;align-items:center;gap:40px;padding:26px 5%;max-width:1280px;margin:0 auto}
+.logo{font:500 28px var(--serif);letter-spacing:.2px;display:flex;align-items:center;gap:12px}
+.mark{width:34px;height:40px;border:1.5px solid var(--copper);border-radius:10px 10px 4px 4px;display:grid;place-items:center;color:var(--copper);font:500 20px var(--serif)}
+nav{display:flex;gap:34px;font-size:15px}nav a{opacity:.9}nav a:hover{color:var(--copper)}
+.hero{max-width:1280px;margin:0 auto;padding:40px 5% 70px;display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:start}
+h1{font:400 clamp(44px,6.2vw,84px)/1.02 var(--serif);letter-spacing:-.5px;margin:60px 0 0}
+.rule{width:44px;height:2px;background:var(--copper);margin:30px 0 24px}
+.lead{font-size:19px;color:#d9c8b3;max-width:430px;margin:0 0 34px}
+.btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:30px;padding:16px 24px;border-radius:5px;font-size:17px;border:1.5px solid var(--copper);cursor:pointer;font-family:var(--sans)}
+.btn.fill{background:linear-gradient(#c97c46,#a8602e);color:#fff;border-color:#a8602e}
+.btn.line{background:transparent;color:var(--copper)}
+.btn:hover{filter:brightness(1.12)}
+.facts{display:flex;gap:26px;margin-top:44px;flex-wrap:wrap}
+.fact{display:flex;align-items:center;gap:12px;font-size:14px;color:#d9c8b3}
+.fact i{width:46px;height:46px;border:1.5px solid var(--copper);border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:18px}
+.board{display:grid;grid-template-columns:1.25fr 1fr;gap:16px}
+.card{border-radius:6px;padding:22px 24px;box-shadow:0 10px 30px #0006}
+.card h2{font:600 12px var(--sans);letter-spacing:2.2px;text-transform:uppercase;margin:0 0 16px}
+.dark{background:#120c08;border:1px solid var(--line)}.dark h2{color:var(--muted)}
+.cream{background:var(--paper);color:var(--ink)}.cream h2{color:var(--copper-d)}
+.green{background:var(--green);color:#f1e7d3}.green h2{color:#c8d3b8}
+.brown{background:#3a2518;border:1px solid var(--line)}.brown h2{color:var(--muted)}
+.today{grid-row:span 2}
+.row{display:flex;gap:14px;padding:13px 0;border-top:1px solid var(--line-ink)}.row:first-of-type{border-top:0;padding-top:0}
+.ic{width:42px;height:42px;flex:none;border-radius:50%;border:1.5px solid #cdb99b;display:grid;place-items:center;font-size:20px}
+.row b{display:flex;justify-content:space-between;gap:10px;font:500 19px var(--serif)}.row b span{font:500 16px var(--sans)}
+.row small{display:block;color:var(--muted-ink);font-size:13px}
+.sig p{margin:0 0 14px;font:400 19px var(--serif)}.sig p small{display:block;font:400 13px var(--sans);color:var(--muted)}
+.hours{width:100%;border-collapse:collapse;font-size:14px}.hours td{padding:7px 0;border-top:1px solid var(--line-ink)}.hours tr:first-child td{border-top:0}.hours td+td{text-align:right}
+.hours tr.now td{font-weight:600;color:var(--green)}
+.status{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:14px;color:var(--green);font-weight:500}
+.status:after{content:"";width:11px;height:11px;border-radius:50%;background:var(--green)}
+.status.closed{color:#8a3b2a}.status.closed:after{background:#8a3b2a}
+.green .big{font:400 26px/1.15 var(--serif);margin:0 0 10px}.green p{margin:0;font-size:14px;color:#d8dcc8}
+.brown p{margin:0 0 6px;font-size:15px}
+section.carta{background:var(--bg2);border-top:1px solid var(--line)}
+.wrap{max-width:1000px;margin:0 auto;padding:80px 5%}
+.wrap>h2{font:400 clamp(34px,4.5vw,52px)/1.1 var(--serif);margin:0 0 8px}
+.wrap>p{color:var(--muted);margin:0 0 30px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.tab{background:transparent;color:var(--cream);border:1px solid var(--line);padding:10px 20px;border-radius:30px;font:500 14px var(--sans);cursor:pointer}
+.tab[aria-pressed=true]{background:var(--copper);border-color:var(--copper);color:#fff}
+.menu{background:var(--paper);color:var(--ink);border-radius:6px;padding:10px 30px;columns:2;column-gap:50px;box-shadow:0 10px 30px #0006}
+.menu .row{break-inside:avoid;padding:18px 0}.menu .row:first-child{border-top:0}
+.menu .row[hidden]{display:none}
+.tag{display:inline-block;margin-top:6px;font-size:12px;color:var(--copper-d);font-weight:600}
+.nota{margin-top:22px;color:var(--muted);font-size:14px}
+footer{max-width:1280px;margin:0 auto;padding:60px 5% 50px;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:30px;color:#d9c8b3;font-size:15px}
+footer h3{font:500 26px var(--serif);margin:0 0 8px;color:var(--cream)}footer p{margin:4px 0}footer strong{color:var(--cream)}
+@media(max-width:860px){header{gap:16px;flex-wrap:wrap}nav{gap:20px;font-size:14px}.hero{grid-template-columns:1fr;gap:40px}h1{margin-top:20px}.menu{columns:1;padding:6px 20px}footer{grid-template-columns:1fr}}
+@media(max-width:520px){.board{grid-template-columns:1fr}.today{grid-row:auto}.btn{gap:16px}}
+#admBtn{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:20;background:var(--copper);color:#fff;border:0;border-radius:30px;padding:13px 22px;font:600 14px var(--sans);cursor:pointer;box-shadow:0 8px 24px #0008}
+#admBtn[hidden]{display:none}
+dialog#adm{width:min(860px,96vw);max-height:92vh;padding:0;border:1px solid var(--line);border-radius:8px;background:var(--bg2);color:var(--cream);overflow:hidden}
+dialog#adm::backdrop{background:#000a}
+dialog#adm[open]{display:flex;flex-direction:column}
+.adm-h,.adm-f{display:flex;align-items:center;gap:14px;padding:16px 24px}.adm-h{justify-content:space-between;border-bottom:1px solid var(--line)}.adm-f{justify-content:flex-end;border-top:1px solid var(--line)}
+.adm-h h2{font:400 26px var(--serif);margin:0}
+.adm-b{overflow:auto;padding:20px 24px;flex:1}
+.adm-b h3{font:600 12px var(--sans);letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:28px 0 12px}.adm-b h3:first-child{margin-top:0}
+.ai{display:grid;grid-template-columns:54px 1.4fr 100px 140px;gap:8px;padding:12px;border:1px solid var(--line);border-radius:6px;margin-bottom:10px;background:var(--bg)}
+.ai .w,.grid2 .w{grid-column:1/-1}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.grid2 label{display:block;font-size:13px;color:var(--muted)}.grid2 input,.grid2 textarea{margin-top:5px}
+dialog#adm input,dialog#adm select,dialog#adm textarea{width:100%;background:#120c08;color:var(--cream);border:1px solid var(--line);border-radius:4px;padding:9px 10px;font:14px var(--sans)}
+dialog#adm input[type=checkbox]{width:auto}
+.ab{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.ab input[data-k=t]{max-width:210px}
+.ck{display:inline-flex;gap:6px;align-items:center;font-size:13px;color:var(--muted)}
+.gh,.pr{border-radius:5px;padding:9px 16px;font:500 14px var(--sans);cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--cream)}.pr{background:var(--copper);border-color:var(--copper);color:#fff;font-weight:600}.pr:disabled{opacity:.5}
+#adm-msg{font-size:14px;color:var(--muted);margin-right:auto}
+@media(max-width:560px){.ai{grid-template-columns:54px 1fr}.grid2{grid-template-columns:1fr}}
+.row.out{opacity:.55}.row.out b span{text-decoration:line-through}
+.ic.ph{width:64px;height:64px;overflow:hidden;padding:0}.ic img{width:100%;height:100%;object-fit:cover;display:block}
+.hr{display:grid;grid-template-columns:1fr 80px 80px;gap:8px;align-items:center;padding:5px 0}.hr .cl{grid-column:span 2;font-size:13px;color:var(--muted)}
+dialog#gate{width:min(380px,92vw);padding:24px;border:1px solid var(--line);border-radius:8px;background:var(--bg2);color:var(--cream)}
+dialog#gate::backdrop{background:#000a}
+dialog#gate h2{font:400 24px var(--serif);margin:0 0 16px}
+dialog#gate input{width:100%;margin-bottom:10px;background:#120c08;color:var(--cream);border:1px solid var(--line);border-radius:4px;padding:10px;font:15px var(--sans)}
+dialog#gate input[hidden]{display:none}
+#gate-m{min-height:1.4em;margin:0 0 8px;font-size:14px;color:#e0907a}
+.gb{display:flex;justify-content:flex-end;gap:10px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+dialog#gate .hint{font-size:13px;color:var(--muted);margin:0 0 12px}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#"><span class="mark">E</span>Café Esquina</a>
+  <nav><a href="#carta">Carta</a><a href="#hoy">Horarios</a><a href="#visita">Visitanos</a></nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h1>Café de especialidad, servido con cariño</h1>
+    <div class="rule"></div>
+    <p class="lead">Mirá la carta, fijate si estamos abiertos y encontrá tu próxima taza en segundos.</p>
+    <div class="btns">
+      <a class="btn fill" href="#carta">Ver carta <span>→</span></a>
+      <a class="btn line" href="#visita">Cómo llegar</a>
+    </div>
+    <div class="facts">
+      <div class="fact"><i>🌱</i>Granos de<br>tueste propio</div>
+      <div class="fact"><i>☕</i>Preparado<br>al momento</div>
+      <div class="fact"><i>🥐</i>Pastelería<br>artesanal</div>
+    </div>
+  </div>
+
+  <div class="board" id="hoy">
+    <div class="card cream today">
+      <h2>Menú de hoy</h2>
+      <div class="row"><div class="ic">☕</div><div><b>Espresso <span>$2.200</span></b><small>Intenso, corto y aromático</small></div></div>
+      <div class="row"><div class="ic">🥛</div><div><b>Cappuccino <span>$3.400</span></b><small>Espresso, leche cremosa y espuma suave</small></div></div>
+      <div class="row"><div class="ic">🧊</div><div><b>Cold brew <span>$3.800</span></b><small>Infusionado en frío, refrescante</small></div></div>
+      <div class="row"><div class="ic">🍰</div><div><b>Cheesecake <span>$4.200</span></b><small>Crema de queso sobre base crocante</small></div></div>
+      <div class="row"><div class="ic">🥐</div><div><b>Medialunas <span>$1.200</span></b><small>Dos medialunas doradas y tiernas</small></div></div>
+    </div>
+    <div class="card dark sig">
+      <h2>Favoritos de la casa</h2>
+      <p>Mocha<small>Café y chocolate, bien cremoso.</small></p>
+      <p>Latte<small>Suave, equilibrado, aterciopelado.</small></p>
+      <p>Limonada<small>Limón exprimido, hielo y menta.</small></p>
+    </div>
+    <div class="card cream">
+      <h2>Horarios</h2>
+      <table class="hours" id="hours">
+        <tbody><tr data-d="1,2,3,4,5"><td>Lun a Vie</td><td>8:00 – 20:00</td></tr>
+        <tr data-d="6"><td>Sábado</td><td>8:00 – 20:00</td></tr>
+        <tr data-d="0"><td>Domingo</td><td>Cerrado</td></tr>
+      </tbody></table>
+      <div class="status" id="status">Verificando…</div>
+    </div>
+  </div>
+</div>
+
+<section class="carta" id="carta">
+  <div class="wrap">
+    <h2>Nuestra carta</h2>
+    <p>Elegí una categoría o mirá todo junto.</p>
+    <div class="tabs" role="group" aria-label="Filtrar la carta">
+      <button class="tab" data-f="todos" aria-pressed="true">Todo</button>
+      <button class="tab" data-f="cafes" aria-pressed="false">Cafés</button>
+      <button class="tab" data-f="frias" aria-pressed="false">Bebidas frías</button>
+      <button class="tab" data-f="dulces" aria-pressed="false">Pastelería</button>
+      <button class="tab" data-f="salados" aria-pressed="false">Salados</button>
+    </div>
+    <div class="menu" id="menu"></div>
+    <p class="nota">Todos los cafés se preparan al momento. Consultá por opciones vegetales y productos sin TACC.</p>
+  </div>
+</section>
+
+<footer id="visita">
+  <div><h3>Café Esquina</h3><p>Un buen café siempre encuentra su momento.</p></div>
+  <div><p><strong>Dirección</strong><br>Av. Principal 123</p><p>Estacionamiento en la calle<br>Bicicletas bienvenidas</p></div>
+  <div><p><strong>Contacto</strong><br>Instagram: @cafeesquina<br>WhatsApp: 11 1234-5678</p></div>
+</footer>
+
+<script id="menu-data" type="application/json">{
+ "items": [
+  {
+   "c": "cafes",
+   "e": "☕",
+   "n": "Espressos",
+   "p": "$2.200",
+   "d": "Café intenso, corto y aromático.",
+   "t": "Clásico de la casa",
+   "fav": false
+  },
+  {
+   "c": "cafes",
+   "e": "🥛",
+   "n": "Cappuccino",
+   "p": "$3.400",
+   "d": "Espresso con leche cremosa y espuma suave.",
+   "t": "",
+   "fav": false
+  },
+  {
+   "c": "cafes",
+   "e": "🤎",
+   "n": "Latte",
+   "p": "$3.600",
+   "d": "Un café suave, equilibrado y aterciopelado.",
+   "t": "",
+   "fav": true
+  },
+  {
+   "c": "cafes",
+   "e": "🍫",
+   "n": "Mocha",
+   "p": "$3.900",
+   "d": "La combinación perfecta de café y chocolate.",
+   "t": "",
+   "fav": true
+  },
+  {
+   "c": "frias",
+   "e": "🧊",
+   "n": "Cold brew",
+   "p": "$3.800",
+   "d": "Café infusionado en frío, refrescante y suave.",
+   "t": "",
+   "fav": false
+  },
+  {
+   "c": "frias",
+   "e": "🍋",
+   "n": "Limonada",
+   "p": "$2.900",
+   "d": "Limón exprimido, hielo y un toque de menta.",
+   "t": "",
+   "fav": true
+  },
+  {
+   "c": "dulces",
+   "e": "🥐",
+   "n": "Medialunas",
+   "p": "$1.200",
+   "d": "Dos medialunas doradas, dulces y tiernas.",
+   "t": "",
+   "fav": false
+  },
+  {
+   "c": "dulces",
+   "e": "🍰",
+   "n": "Cheesecake",
+   "p": "$4.200",
+   "d": "Suave crema de queso con base crocante.",
+   "t": "Favorito",
+   "fav": false
+  },
+  {
+   "c": "dulces",
+   "e": "🍪",
+   "n": "Cookie de chocolate",
+   "p": "$2.000",
+   "d": "Grande, recién horneada y con chips.",
+   "t": "",
+   "fav": false
+  },
+  {
+   "c": "salados",
+   "e": "🥪",
+   "n": "Tostado clásico",
+   "p": "$4.500",
+   "d": "Jamón y queso en pan tostado.",
+   "t": "",
+   "fav": false
+  },
+  {
+   "c": "salados",
+   "e": "🥑",
+   "n": "Tostón de palta",
+   "p": "$4.800",
+   "d": "Pan de campo, palta fresca y semillas.",
+   "t": "",
+   "fav": false
+  },
+  {
+   "c": "salados",
+   "e": "🥧",
+   "n": "Porción de tarta",
+   "p": "$3.900",
+   "d": "Consultá por los sabores del día.",
+   "t": "",
+   "fav": false
+  }
+ ],
+ "info": {
+  "addr": "Av. Principal 123",
+  "extra": "Estacionamiento en la calle · Bicicletas bienvenidas",
+  "ig": "@cafeesquina",
+  "wa": "11 1234-5678",
+  "nota": "Todos los cafés se preparan al momento. Consultá por opciones vegetales y productos sin TACC.",
+  "hours": [
+   null,
+   {
+    "o": 8,
+    "c": 20
+   },
+   {
+    "o": 8,
+    "c": 20
+   },
+   {
+    "o": 8,
+    "c": 20
+   },
+   {
+    "o": 8,
+    "c": 20
+   },
+   {
+    "o": 8,
+    "c": 20
+   },
+   {
+    "o": 8,
+    "c": 20
+   }
+  ]
+ },
+ "hoy": {
+  "t": "Menú de hoy",
+  "l": [
+   {
+    "e": "☕",
+    "n": "Espressos",
+    "p": "$2.200",
+    "d": "Café intenso, corto y aromático."
+   },
+   {
+    "e": "🥛",
+    "n": "Cappuccino",
+    "p": "$3.400",
+    "d": "Espresso con leche cremosa y espuma suave."
+   },
+   {
+    "e": "🧊",
+    "n": "Cold brew",
+    "p": "$3.800",
+    "d": "Café infusionado en frío, refrescante y suave."
+   },
+   {
+    "e": "🥐",
+    "n": "Medialunas",
+    "p": "$1.200",
+    "d": "Dos medialunas doradas, dulces y tiernas."
+   },
+   {
+    "e": "🍰",
+    "n": "Cheesecake",
+    "p": "$4.200",
+    "d": "Suave crema de queso con base crocante."
+   }
+  ]
+ }
+}</script>
+<button id="admBtn" type="button" hidden>Administrar</button>
+<dialog id="adm" aria-labelledby="adm-t">
+ <div class="adm-h"><h2 id="adm-t">Administrar carta</h2><button type="button" id="adm-x" class="gh">Cerrar</button></div>
+ <div class="adm-b">
+  <h3>Productos</h3><div id="adm-items"></div>
+  <button type="button" id="adm-add" class="gh">+ Agregar producto</button>
+  <h3>Menú de hoy</h3>
+  <input id="hoy-t" aria-label="Título de la tarjeta" placeholder="Título (ej. Menú de hoy)" style="margin-bottom:10px">
+  <div id="adm-hoy"></div>
+  <div class="ab"><button type="button" id="hoy-add" class="gh">+ Agregar plato</button><select id="hoy-from" aria-label="Producto de la carta" style="width:auto;max-width:220px"></select><button type="button" id="hoy-cp" class="gh">Agregar desde la carta</button></div>
+  <h3>Datos del local</h3>
+  <div id="adm-info" class="grid2">
+   <div class="w"><span class="ck">Horarios por día (apertura y cierre, de 0 a 24)</span><div id="adm-hours"></div></div>
+   <label class="w">Dirección<input id="i-addr"></label>
+   <label class="w">Aclaración (estacionamiento, etc.)<input id="i-extra"></label>
+   <label>Instagram<input id="i-ig"></label>
+   <label>WhatsApp<input id="i-wa"></label>
+   <label class="w">Nota al pie de la carta<textarea id="i-nota" rows="2"></textarea></label>
+  </div>
+ </div>
+ <div class="adm-f"><span id="adm-msg" role="status"></span><button type="button" id="adm-out" class="gh">Desconectar</button><button type="button" id="adm-save" class="pr">Guardar</button></div>
+</dialog>
+<dialog id="gate" aria-labelledby="gate-t">
+ <h2 id="gate-t">Conectar con GitHub</h2>
+ <p class="hint">Hace falta un token de acceso con permiso de escritura sobre este repositorio. Se guarda solo en este dispositivo.</p>
+ <input id="g-owner" placeholder="Usuario u organización de GitHub" aria-label="Usuario">
+ <input id="g-repo" placeholder="Nombre del repositorio" aria-label="Repositorio">
+ <input id="g-branch" placeholder="Rama (main)" aria-label="Rama">
+ <input id="g-path" placeholder="Archivo de datos (menu.json)" aria-label="Archivo de datos">
+ <input id="g-token" type="password" placeholder="Token (github_pat_…)" autocomplete="off" aria-label="Token">
+ <label class="ck" style="margin-bottom:10px"><input type="checkbox" id="g-rem" checked style="width:auto;margin:0">Recordar en este dispositivo</label>
+ <p id="gate-m" role="alert"></p>
+ <div class="gb"><button type="button" id="gate-x" class="gh">Cancelar</button><button type="button" id="gate-ok" class="pr">Continuar</button></div>
+</dialog>
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const CATS={cafes:'Cafés',frias:'Bebidas frías',dulces:'Pastelería',salados:'Salados'};
+const DN=['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+const norm=s=>{const I=s.info||(s.info={});if(!I.hours)I.hours=[null,...Array(6).fill({o:I.open??8,c:I.close??20})];if(!s.hoy)s.hoy={t:'Menú de hoy',l:(s.items||[]).filter(x=>x.hoy).map(x=>({e:x.e,n:x.n,p:x.p,d:x.d,img:x.img}))};return s};
+let state=norm(JSON.parse($('#menu-data').textContent));
+const img=x=>/^img\/[\w.\-]+$/.test(x.img||'')?`<div class="ic ph"><img src="${esc(x.img)}" alt="${esc(x.n)}" loading="lazy"></div>`:`<div class="ic">${esc(x.e)}</div>`;
+const row=x=>`<div class="row${x.out?' out':''}" data-c="${esc(x.c)}">${img(x)}<div><b>${esc(x.n)} <span>${esc(x.p)}</span></b><small>${esc(x.d)}</small>${x.out?'<span class="tag">Agotado</span>':x.t?`<span class="tag">${esc(x.t)}</span>`:''}</div></div>`;
+const menu=$('#menu'),tabs=document.querySelectorAll('.tab');
+let filt='todos';
+const applyF=()=>menu.querySelectorAll('.row').forEach(r=>r.hidden=filt!=='todos'&&r.dataset.c!==filt);
+tabs.forEach(t=>t.onclick=()=>{filt=t.dataset.f;tabs.forEach(x=>x.setAttribute('aria-pressed',x===t));applyF()});
+function status(){
+ const st=$('#status');
+ try{
+  const p=new Intl.DateTimeFormat('en-US',{timeZone:'America/Argentina/Buenos_Aires',weekday:'short',hour:'numeric',hour12:false}).formatToParts(new Date());
+  const wd=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.find(x=>x.type==='weekday').value);
+  const h=parseInt(p.find(x=>x.type==='hour').value,10)%24;
+  const T=state.info.hours[wd],open=!!T&&h>=T.o&&h<T.c;
+  st.hidden=false;st.textContent=open?'Abierto ahora':'Cerrado ahora';st.classList.toggle('closed',!open);
+  document.querySelectorAll('#hours tr').forEach(r=>r.classList.toggle('now',r.dataset.d===String(wd)));
+ }catch(e){st.hidden=true}
+}
+function render(){
+ const I=state.info;
+ menu.innerHTML=state.items.map(row).join('');applyF();
+ $('.today').innerHTML='<h2>'+esc(state.hoy.t)+'</h2>'+(state.hoy.l.map(row).join('')||'<small>Pronto sumamos novedades.</small>');
+ $('.sig').innerHTML='<h2>Favoritos de la casa</h2>'+state.items.filter(x=>x.fav).map(x=>`<p>${esc(x.n)}<small>${esc(x.d)}</small></p>`).join('');
+ $('#hours').innerHTML=[1,2,3,4,5,6,0].map(d=>{const h=I.hours[d];return`<tr data-d="${d}"><td>${DN[d]}</td><td>${h?`${h.o}:00 – ${h.c}:00`:'Cerrado'}</td></tr>`}).join('');
+ const FT=document.querySelectorAll('footer>div');
+ FT[1].innerHTML=`<p><strong>Dirección</strong><br>${esc(I.addr)}</p><p>${esc(I.extra)}</p>`;
+ FT[2].innerHTML=`<p><strong>Contacto</strong><br>Instagram: ${esc(I.ig)}<br>WhatsApp: ${esc(I.wa)}</p>`;
+ $('.nota').textContent=I.nota;
+ status();
+}
+(async()=>{
+ try{const r=await fetch('menu.json?v='+Date.now(),{cache:'no-store'});if(r.ok)state=norm(await r.json())}catch(e){}
+ render();
+})();
+
+// ---- Panel de administración (guarda en GitHub con la API de contenidos) ----
+(()=>{
+const btn=$('#admBtn'),dlg=$('#adm'),box=$('#adm-items'),msg=$('#adm-msg'),save=$('#adm-save');
+const gate=$('#gate'),gm=$('#gate-m'),go=$('#gate-ok'),gx=$('#gate-x');
+const toB64=s=>{let x='';new TextEncoder().encode(s).forEach(c=>x+=String.fromCharCode(c));return btoa(x)};
+const fromB64=s=>new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\s/g,'')),c=>c.charCodeAt(0)));
+const LS='cafe_gh';
+const saved=()=>{try{return JSON.parse(localStorage.getItem(LS))||{}}catch(e){return{}}};
+const guess=()=>{const h=location.hostname;if(!h.endsWith('.github.io'))return{};const p=location.pathname.split('/').filter(Boolean)[0];return{owner:h.split('.')[0],repo:p&&!p.includes('.')?p:h}};
+let C=null,sha=null,d=null;
+const api=async(c,path,o={})=>{
+ const r=await fetch(`https://api.github.com/repos/${c.owner}/${c.repo}/contents/${path}${o.q||''}`,{method:o.method||'GET',headers:{Accept:'application/vnd.github+json',Authorization:'Bearer '+c.token,'X-GitHub-Api-Version':'2022-11-28'},body:o.body&&JSON.stringify(o.body)});
+ const j=await r.json().catch(()=>({}));
+ if(!r.ok){const e=new Error(j.message||('Error '+r.status));e.status=r.status;throw e}
+ return j;
+};
+const errTxt=e=>e.status===401?'El token no es válido o venció.':e.status===403?'El token no tiene permiso de escritura en este repositorio.':e.status===404?'No se encontró el repositorio o la rama. Revisá los datos.':(e.status===409||e.status===422)?'El archivo cambió en GitHub. Cerrá el panel y volvé a abrirlo.':(e.message||'No se pudo conectar.');
+const showBtn=()=>{btn.hidden=location.hash!=='#admin'};showBtn();addEventListener('hashchange',showBtn);
+
+const connect=()=>new Promise(res=>{
+ const s={branch:'main',path:'menu.json',...guess(),...saved()};
+ $('#g-owner').value=s.owner||'';$('#g-repo').value=s.repo||'';$('#g-branch').value=s.branch;$('#g-path').value=s.path;$('#g-token').value=s.token||'';
+ gm.textContent='';
+ const fin=v=>{gate.close();go.onclick=gx.onclick=gate.onclose=null;res(v)};
+ go.onclick=async()=>{
+  const c={owner:$('#g-owner').value.trim(),repo:$('#g-repo').value.trim(),branch:$('#g-branch').value.trim()||'main',path:$('#g-path').value.trim()||'menu.json',token:$('#g-token').value.trim()};
+  if(!c.owner||!c.repo||!c.token){gm.textContent='Completá usuario, repositorio y token.';return}
+  go.disabled=true;gm.textContent='Conectando…';
+  try{
+   let remote=null,sh=null;
+   try{const j=await api(c,c.path,{q:'?ref='+encodeURIComponent(c.branch)});sh=j.sha;remote=norm(JSON.parse(fromB64(j.content)))}
+   catch(e){
+    if(e.status!==404)throw e;
+    const r=await fetch(`https://api.github.com/repos/${c.owner}/${c.repo}`,{headers:{Authorization:'Bearer '+c.token}});
+    if(!r.ok){const x=new Error('');x.status=r.status;throw x}
+   }
+   if($('#g-rem').checked)localStorage.setItem(LS,JSON.stringify(c));else localStorage.removeItem(LS);
+   go.disabled=false;fin({c,sh,remote:remote||state});
+  }catch(e){go.disabled=false;gm.textContent=errTxt(e)}
+ };
+ gx.onclick=()=>fin(null);
+ gate.onclose=()=>res(null);
+ gate.showModal();
+});
+
+const opts=v=>Object.entries(CATS).map(([k,l])=>`<option value="${k}"${k===v?' selected':''}>${l}</option>`).join('');
+const draw=()=>{box.innerHTML=d.items.map((x,i)=>`<div class="ai" data-i="${i}"><input data-k="e" value="${esc(x.e)}" aria-label="Emoji"><input data-k="n" value="${esc(x.n)}" aria-label="Nombre"><input data-k="p" value="${esc(x.p)}" aria-label="Precio"><select data-k="c" aria-label="Categoría">${opts(x.c)}</select><input class="w" data-k="d" value="${esc(x.d)}" aria-label="Descripción" placeholder="Descripción"><div class="w ab"><input data-k="t" value="${esc(x.t)}" placeholder="Etiqueta (ej. Favorito)" aria-label="Etiqueta"><label class="ck"><input type="checkbox" data-k="fav"${x.fav?' checked':''}>Favoritos</label><label class="ck"><input type="checkbox" data-k="out"${x.out?' checked':''}>Agotado</label><button type="button" class="gh" data-a="ph">${x.img?'Cambiar foto':'Subir foto'}</button>${x.img?'<button type="button" class="gh" data-a="rph">Quitar foto</button>':''}<span style="flex:1"></span><button type="button" class="gh" data-a="up" aria-label="Subir">↑</button><button type="button" class="gh" data-a="dn" aria-label="Bajar">↓</button><button type="button" class="gh" data-a="del">Eliminar</button></div></div>`).join('')};
+const pick=i=>{
+ const f=document.createElement('input');f.type='file';f.accept='image/*';
+ f.onchange=async()=>{
+  const file=f.files[0];if(!file)return;msg.textContent='Subiendo foto…';
+  try{
+   const bm=await createImageBitmap(file),s=Math.min(1,640/Math.max(bm.width,bm.height));
+   const cv=document.createElement('canvas');cv.width=Math.round(bm.width*s);cv.height=Math.round(bm.height*s);
+   cv.getContext('2d').drawImage(bm,0,0,cv.width,cv.height);
+   const blob=await new Promise(r=>cv.toBlob(r,'image/jpeg',.82));
+   const b64=await new Promise(r=>{const fr=new FileReader();fr.onload=()=>r(fr.result.split(',')[1]);fr.readAsDataURL(blob)});
+   const name=Date.now()+'.jpg',dir=C.path.includes('/')?C.path.replace(/[^/]+$/,''):'';
+   await api(C,dir+'img/'+name,{method:'PUT',body:{message:'Subir foto de producto',content:b64,branch:C.branch}});
+   d.items[i].img='img/'+name;msg.textContent='Foto subida. Falta tocar Guardar.';draw();
+  }catch(err){msg.textContent='No se pudo subir la foto: '+errTxt(err)}
+ };
+ f.click();
+};
+box.addEventListener('input',e=>{const el=e.target,k=el.dataset.k;if(!k)return;d.items[+el.closest('.ai').dataset.i][k]=el.type==='checkbox'?el.checked:el.value});
+box.addEventListener('click',e=>{
+ const a=e.target.dataset.a;if(!a)return;const i=+e.target.closest('.ai').dataset.i;
+ if(a==='rph'){delete d.items[i].img;draw();return}
+ if(a==='ph'){pick(i);return}
+ if(a==='del')d.items.splice(i,1);else{const j=a==='up'?i-1:i+1;if(j<0||j>=d.items.length)return;[d.items[i],d.items[j]]=[d.items[j],d.items[i]]}
+ draw();
+});
+$('#adm-add').onclick=()=>{d.items.push({c:'cafes',e:'☕',n:'Nuevo producto',p:'$0',d:'',t:'',fav:false});draw();box.lastElementChild.scrollIntoView({block:'center'})};
+
+const hoyBox=$('#adm-hoy'),hoyT=$('#hoy-t'),hoyFrom=$('#hoy-from');
+const fromOpts=()=>d.items.map((x,i)=>`<option value="${i}">${esc(x.n)}</option>`).join('');
+const drawHoy=()=>{hoyT.value=d.hoy.t;hoyBox.innerHTML=d.hoy.l.map((x,i)=>`<div class="ai" data-i="${i}"><input data-k="e" value="${esc(x.e)}" aria-label="Emoji"><input data-k="n" value="${esc(x.n)}" aria-label="Nombre"><input data-k="p" value="${esc(x.p)}" aria-label="Precio"><span></span><input class="w" data-k="d" value="${esc(x.d)}" placeholder="Descripción" aria-label="Descripción"><div class="w ab"><span style="flex:1"></span><button type="button" class="gh" data-a="up" aria-label="Subir">↑</button><button type="button" class="gh" data-a="dn" aria-label="Bajar">↓</button><button type="button" class="gh" data-a="del">Eliminar</button></div></div>`).join('');hoyFrom.innerHTML=fromOpts()};
+hoyT.addEventListener('input',()=>{d.hoy.t=hoyT.value});
+hoyFrom.addEventListener('focus',()=>{const v=hoyFrom.value;hoyFrom.innerHTML=fromOpts();hoyFrom.value=v});
+hoyBox.addEventListener('input',e=>{const k=e.target.dataset.k;if(k)d.hoy.l[+e.target.closest('.ai').dataset.i][k]=e.target.value});
+hoyBox.addEventListener('click',e=>{const a=e.target.dataset.a;if(!a)return;const L=d.hoy.l,i=+e.target.closest('.ai').dataset.i;if(a==='del')L.splice(i,1);else{const j=a==='up'?i-1:i+1;if(j<0||j>=L.length)return;[L[i],L[j]]=[L[j],L[i]]}drawHoy()});
+$('#hoy-add').onclick=()=>{d.hoy.l.push({e:'☕',n:'Nuevo plato',p:'$0',d:''});drawHoy();hoyBox.lastElementChild.scrollIntoView({block:'center'})};
+$('#hoy-cp').onclick=()=>{const x=d.items[+hoyFrom.value];if(!x)return;d.hoy.l.push({e:x.e,n:x.n,p:x.p,d:x.d,img:x.img});drawHoy()};
+
+const drawHours=()=>{$('#adm-hours').innerHTML=[1,2,3,4,5,6,0].map(dd=>{const h=d.info.hours[dd];return`<div class="hr"><label class="ck"><input type="checkbox" data-h="${dd}.on"${h?' checked':''}>${DN[dd]}</label>${h?`<input type="number" min="0" max="24" data-h="${dd}.o" value="${h.o}" aria-label="Abre"><input type="number" min="0" max="24" data-h="${dd}.c" value="${h.c}" aria-label="Cierra">`:'<span class="cl">Cerrado</span>'}</div>`}).join('')};
+$('#adm-info').addEventListener('input',e=>{
+ const el=e.target;
+ if(el.dataset.h){const [i,f]=el.dataset.h.split('.'),H=d.info.hours;if(f==='on'){H[i]=el.checked?{o:8,c:20}:null;drawHours()}else H[i][f]=Number(el.value);return}
+ if(!el.id.startsWith('i-'))return;d.info[el.id.slice(2)]=el.value;
+});
+
+btn.onclick=async()=>{
+ const r=await connect();if(!r)return;
+ C=r.c;sha=r.sh;d=JSON.parse(JSON.stringify(r.remote));
+ draw();drawHoy();drawHours();
+ ['addr','extra','ig','wa','nota'].forEach(k=>$('#i-'+k).value=d.info[k]||'');
+ msg.textContent='';save.disabled=false;dlg.showModal();
+};
+$('#adm-x').onclick=()=>dlg.close();
+$('#adm-out').onclick=()=>{localStorage.removeItem(LS);C=null;dlg.close()};
+save.onclick=async()=>{
+ const bad=d.info.hours.some(h=>h&&!(Number.isInteger(h.o)&&Number.isInteger(h.c)&&h.o>=0&&h.c<=24&&h.o<h.c));
+ if(d.items.some(x=>!x.n.trim())||d.hoy.l.some(x=>!x.n.trim())){msg.textContent='Todos los productos y platos necesitan un nombre.';return}
+ if(bad){msg.textContent='Revisá los horarios: la apertura debe ser menor que el cierre.';return}
+ save.disabled=true;msg.textContent='Guardando en GitHub…';
+ try{
+  const body={message:'Actualizar carta desde el panel',content:toB64(JSON.stringify(d,null,1)),branch:C.branch};
+  if(sha)body.sha=sha;
+  const r=await api(C,C.path,{method:'PUT',body});
+  sha=r.content.sha;state=norm(JSON.parse(JSON.stringify(d)));render();
+  msg.textContent='¡Guardado! GitHub Pages puede tardar uno o dos minutos en mostrarlo a todos.';
+ }catch(e){msg.textContent=errTxt(e)}
+ save.disabled=false;
+};
+})();
+</script>
+</body>
+</html>
